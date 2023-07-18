@@ -104,8 +104,6 @@ expander.write('Here you could put in some really, really long explanations...')
 
 with st.spinner('Wait for it...'):
     time.sleep(5)
-
-
 st.success('Done!')
 
 st.error('This is an error')

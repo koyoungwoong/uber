@@ -24,7 +24,10 @@ expander.write(tickerData.info)
 
 st.subheader('Stock Chart')
 
-tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2023-6-30')
+with st.spinner('Wait for it...'):
+    tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2023-6-30')
+st.success('Done!')
+
 
 st.line_chart(tickerDf.Close)
 st.line_chart(tickerDf.Volume)
